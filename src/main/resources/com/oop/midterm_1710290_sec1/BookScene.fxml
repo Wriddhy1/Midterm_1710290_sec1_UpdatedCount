@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="587.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.midterm_1710290_sec1.BookSceneController">
+   <children>
+      <TextField fx:id="bookIdTextField" layoutX="104.0" layoutY="42.0" />
+      <TextField fx:id="BookTitleTextField" layoutX="104.0" layoutY="93.0" />
+      <TextField fx:id="priceTextField" layoutX="104.0" layoutY="146.0" />
+      <ComboBox fx:id="bookGenreComboBox" layoutX="109.0" layoutY="207.0" prefWidth="150.0" />
+      <Label layoutX="23.0" layoutY="42.0" prefHeight="26.0" prefWidth="71.0" text="Book ID" />
+      <Label layoutX="23.0" layoutY="93.0" prefHeight="26.0" prefWidth="71.0" text="Book Title" />
+      <Label layoutX="23.0" layoutY="146.0" prefHeight="26.0" prefWidth="71.0" text="Price" />
+      <Label layoutX="23.0" layoutY="207.0" prefHeight="26.0" prefWidth="71.0" text="Book Genre" />
+      <Button layoutX="106.0" layoutY="257.0" mnemonicParsing="false" onAction="#addnewbookOnAction" text="Add new book to array list" />
+      <Button layoutX="424.0" layoutY="159.0" mnemonicParsing="false" onAction="#SearchandShowOnAction" text="Search and Show" />
+      <ComboBox fx:id="searchGenreComboBox" layoutX="405.0" layoutY="42.0" prefWidth="150.0" />
+      <TextField fx:id="minpriceTextField" layoutX="400.0" layoutY="80.0" />
+      <TextField fx:id="maxPriceTextField" layoutX="405.0" layoutY="119.0" />
+      <Label layoutX="311.0" layoutY="47.0" prefHeight="17.0" prefWidth="79.0" text="search genre" />
+      <Label layoutX="332.0" layoutY="85.0" prefHeight="17.0" prefWidth="58.0" text="Min price" />
+      <Label layoutX="332.0" layoutY="124.0" prefHeight="17.0" prefWidth="58.0" text="max price" />
+      <TableView fx:id="tableView" layoutX="21.0" layoutY="331.0" prefHeight="249.0" prefWidth="561.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="119.0" text="Book ID" />
+          <TableColumn fx:id="titleCol" prefWidth="106.0" text="Book Title" />
+            <TableColumn fx:id="priceCol" prefWidth="139.0" text="Price" />
+            <TableColumn fx:id="genreCol" prefWidth="105.0" text="Genre" />
+            <TableColumn fx:id="countCol" prefWidth="91.0" text="Count" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
